@@ -1,0 +1,96 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2022 19:06:25] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2022 19:06:25] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+ERROR:app:Exception on /search/ [GET]
+Traceback (most recent call last):
+  File "C:\aaaaaa\lesson12\venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\aaaaaa\lesson12\venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\aaaaaa\lesson12\venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\aaaaaa\lesson12\venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\aaaaaa\lesson12\lesson12_project_source_v3\main\main.py", line 17, in search_posts
+    posts = posts_list()
+  File "C:\aaaaaa\lesson12\lesson12_project_source_v3\functions.py", line 5, in posts_list
+    with open('post.json', 'r', encoding='utf-8') as file:
+FileNotFoundError: [Errno 2] No such file or directory: 'post.json'
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2022 19:06:27] "[35m[1mGET /search/?s=елки HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /search/ [GET]
+Traceback (most recent call last):
+  File "C:\aaaaaa\lesson12\venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\aaaaaa\lesson12\venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\aaaaaa\lesson12\venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\aaaaaa\lesson12\venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\aaaaaa\lesson12\lesson12_project_source_v3\main\main.py", line 18, in search_posts
+    search_posts_list = [post for post in posts if search_name.lower() in post['content'].lower()]
+TypeError: 'NoneType' object is not iterable
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2022 19:11:00] "[35m[1mGET /search/?s=елки HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /search/ [GET]
+Traceback (most recent call last):
+  File "C:\aaaaaa\lesson12\venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\aaaaaa\lesson12\venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\aaaaaa\lesson12\venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\aaaaaa\lesson12\venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\aaaaaa\lesson12\lesson12_project_source_v3\main\main.py", line 18, in search_posts
+    search_posts_list = [post for post in posts if search_name.lower() in post['content'].lower()]
+TypeError: 'bool' object is not iterable
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2022 19:11:51] "[35m[1mGET /search/?s=елки HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2022 19:14:21] "GET /search/?s=елки HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2022 19:15:50] "GET /search/?s=елки HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Поиска записей по запросу "елки"
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2022 19:16:11] "GET /search/?s=елки HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2022 19:16:11] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2022 19:16:13] "GET /post_create HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2022 19:16:13] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2022 19:16:30] "POST /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2022 19:16:30] "GET /static/images/3.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2022 19:16:30] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2022 19:16:31] "GET /post_create HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2022 19:16:31] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2022 19:16:39] "POST /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2022 19:16:39] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2022 19:16:39] "GET /static/images/11.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2022 19:16:40] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2022 19:16:40] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Поиска записей по запросу "чек"
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2022 19:16:43] "GET /search/?s=чек HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2022 19:16:43] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2022 19:16:43] "[36mGET /static/images/3.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2022 19:16:44] "[36mGET /static/images/11.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2022 19:16:48] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2022 19:16:48] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2022 19:16:52] "GET /post_create HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2022 19:16:52] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2022 19:17:51] "GET /post_create HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2022 19:17:51] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Загруженный файл не кратинка
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2022 19:17:56] "POST /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2022 19:18:02] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2022 19:18:02] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
